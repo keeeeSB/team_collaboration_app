@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    ansi (1.5.0)
     base64 (0.2.0)
     bcrypt (3.1.20)
     bindex (0.8.1)
@@ -119,6 +120,11 @@ GEM
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.25.1)
+    minitest-reporters (1.6.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     msgpack (1.7.5)
     net-imap (0.5.1)
       date
@@ -176,6 +182,7 @@ GEM
     reline (0.5.11)
       io-console (~> 0.5)
     rexml (3.3.9)
+    ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.26.0)
       base64 (~> 0.2)
@@ -224,6 +231,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  minitest-reporters (= 1.6.0)
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.6)
   selenium-webdriver
