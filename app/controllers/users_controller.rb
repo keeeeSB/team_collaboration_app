@@ -8,11 +8,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "ようこそ！"
-      redirect_to root_path
+      redirect_to @user
     else
       flash.now[:danger] = "登録できませんでした。"
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private
