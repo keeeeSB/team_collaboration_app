@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'teams/new'
+  get 'teams/show'
   root   "users#new"
   get    "/signup", to: "users#new"
   post  "/signup",  to: "users#create"
