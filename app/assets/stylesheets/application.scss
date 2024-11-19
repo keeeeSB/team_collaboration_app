@@ -1,1 +1,9 @@
 @import "bootstrap";
+
+body {
+  background-image: url('aozora.webp');
+  background-size: cover;    /* 画像を画面全体に拡大縮小して表示 */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像を繰り返し表示しない */
+  background-attachment: fixed; /* スクロール時に背景を固定 */
+}

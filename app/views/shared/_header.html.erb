@@ -1,0 +1,19 @@
+<header class="p-3 border-bottom bg-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><%= link_to "ホーム", root_path, class: "nav-link px-2 text-secondary" %></li>
+      </ul>
+
+      <div class="text-end">
+        <% if logged_in? %>
+          <%= link_to "プロフィール", current_user, class: "btn btn-info" %>
+          <%= link_to "ログアウト", logout_path, data: { turbo_method: :delete }, class: "btn btn-danger" %>
+        <% else %>
+          <%= link_to "ログイン", login_path, class: "btn btn-info" %>
+          <%= link_to "新規登録", signup_path, class: "btn btn-warning" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>
