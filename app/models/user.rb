@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :team_members, dependent: :destroy
+  has_many :teams, through: :team_members
+
   validates :name,     presence: true
   validates :email,    presence: true
   validates :password, presence: true, length: { minimum: 6 }
